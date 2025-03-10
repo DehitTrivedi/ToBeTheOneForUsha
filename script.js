@@ -1,35 +1,41 @@
-document.getElementById("revealButton").addEventListener("click", function() {
-    let message = document.getElementById("hiddenMessage");
-    message.style.display = "block";
-});
-
-// Michael Jackson Moonwalk
 document.getElementById("scaryButton").addEventListener("click", function() {
     let mj = document.getElementById("mj-container");
-    let bubble = document.getElementById("thoughtBubble");
+    let audio = document.getElementById("mjAudio");
+    let knightBtn = document.getElementById("knightButton");
 
     mj.style.display = "block";
     mj.style.animation = "moonwalk 4s linear forwards";
-    
-    bubble.style.display = "block";
-    bubble.style.animation = "bubbleFade 3s linear";
+    audio.play();
+
+    // Show knight button after MJ appears
+    setTimeout(() => {
+        knightBtn.style.display = "block";
+    }, 2000);
 });
 
-// Knight Battle Animation
+// Knight fights MJ
 document.getElementById("knightButton").addEventListener("click", function() {
     let knight = document.getElementById("stick-figure-container");
     let speech = document.getElementById("knightSpeech");
+    let mj = document.getElementById("mj-container");
+    let audio = document.getElementById("mjAudio");
 
     knight.style.display = "block";
-    knight.style.animation = "knightFight 3s linear forwards";
+    knight.style.animation = "knightFight 2s linear forwards";
 
+    // MJ disappears
     setTimeout(() => {
+        mj.style.display = "none";
+        audio.pause();
+        audio.currentTime = 0;
         speech.style.display = "block";
-    }, 3000);
+    }, 2500);
 
-    // Hide everything after 5 seconds
+    // Reset to homepage
     setTimeout(() => {
+        document.getElementById("homepage").style.display = "block";
         knight.style.display = "none";
         speech.style.display = "none";
+        document.getElementById("knightButton").style.display = "none";
     }, 5000);
 });

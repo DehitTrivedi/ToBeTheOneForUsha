@@ -3,43 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Surprise for You!</title>
+    <title>Surprise for Usha</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <h1>Hey, Usha 👋</h1>
-        <p>Welcome to a little surprise I made just for you! 💖</p>
-        
-        <button id="revealButton">Click me for a surprise</button>
-        <p id="hiddenMessage" class="hidden">You are amazing! 😊</p>
+    <div id="homepage" class="container">
+        <h1>Hey Usha, welcome! 😊</h1>
+        <p>Here is my formal application.</p>
+        <button id="surpriseButton">Click me for a surprise</button>
+        <button id="scaryButton">😱</button>
+    </div>
 
-        <div class="button-group">
-            <button id="scaryButton">😱</button>
-            <button id="knightButton">🛡️</button>
+    <!-- Michael Jackson GIF & Audio -->
+    <div id="mj-container">
+        <img src="michael.gif" id="michael" alt="Michael Jackson">
+        <audio id="mjAudio" src="sound.mp3"></audio>
+    </div>
+
+    <!-- Knight Button -->
+    <button id="knightButton">🏇</button>
+
+    <!-- Stick Figure Fighter -->
+    <div id="stick-figure-container">
+        <div class="stick-figure">
+            <div class="head"></div>
+            <div class="body"></div>
+            <div class="left-arm"></div>
+            <div class="right-arm"></div>
+            <div class="left-leg"></div>
+            <div class="right-leg"></div>
+            <div class="sword"></div>
         </div>
-
-        <!-- Michael Jackson GIF container -->
-        <div id="mj-container">
-            <img src="your_mj_gif.gif" id="michael" alt="Michael Jackson">
-            <div id="thoughtBubble">Hehe 😏</div>
-        </div>
-
-        <!-- Stick Figure Fighter -->
-        <div id="stick-figure-container">
-            <div class="stick-figure">
-                <div class="head"></div>
-                <div class="body"></div>
-                <div class="left-arm"></div>
-                <div class="right-arm"></div>
-                <div class="left-leg"></div>
-                <div class="right-leg"></div>
-                <div class="sword"></div>
-            </div>
-            <p id="knightSpeech">I am here to save you, my lady! 🏰</p>
-        </div>
-
+        <p id="knightSpeech">I am here to save you, my lady! 🏰</p>
     </div>
 
     <script src="script.js"></script>
