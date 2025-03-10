@@ -36,28 +36,38 @@ button:hover {
     margin-top: 20px;
 }
 
-/* SCARY FACE BUTTON */
+/* Smaller scary face button */
 #scaryButton {
-    background: #000;
-    font-size: 25px;
+    background: black;
+    font-size: 20px;
     border-radius: 50%;
-    padding: 10px;
-    margin-top: 20px;
+    padding: 8px;
+    margin-top: 10px;
 }
 
-/* MICHAEL JACKSON ANIMATION */
+/* Knight button */
+#knightButton {
+    background: navy;
+    font-size: 20px;
+    border-radius: 50%;
+    padding: 8px;
+    margin-top: 10px;
+}
+
+/* Michael Jackson GIF */
 #mj-container {
     position: absolute;
     bottom: 20px;
-    left: -150px;
+    left: -200px;
     display: none;
 }
 
 #michael {
-    width: 100px;
+    width: 120px;
     height: auto;
 }
 
+/* Thought bubble */
 #thoughtBubble {
     position: absolute;
     top: -30px;
@@ -71,14 +81,93 @@ button:hover {
     display: none;
 }
 
-/* ANIMATION */
+/* Stick Figure Fighter */
+#stick-figure-container {
+    position: absolute;
+    bottom: 20px;
+    right: -150px;
+    display: none;
+}
+
+.stick-figure {
+    position: relative;
+    width: 30px;
+    height: 80px;
+    margin: auto;
+}
+
+.head {
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 5px;
+}
+
+.body {
+    width: 5px;
+    height: 40px;
+    background: white;
+    position: absolute;
+    top: 20px;
+    left: 13px;
+}
+
+.left-arm, .right-arm {
+    width: 20px;
+    height: 5px;
+    background: white;
+    position: absolute;
+    top: 25px;
+}
+
+.left-arm { left: -10px; }
+.right-arm { left: 15px; }
+
+.left-leg, .right-leg {
+    width: 5px;
+    height: 25px;
+    background: white;
+    position: absolute;
+    top: 60px;
+}
+
+.left-leg { left: 5px; }
+.right-leg { left: 15px; }
+
+.sword {
+    width: 5px;
+    height: 30px;
+    background: silver;
+    position: absolute;
+    top: 5px;
+    left: 25px;
+}
+
+/* Knight Speech */
+#knightSpeech {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    display: none;
+}
+
+/* Animations */
 @keyframes moonwalk {
-    0% { left: -150px; }
+    0% { left: -200px; }
     100% { left: 100%; }
 }
 
-@keyframes bubbleFade {
-    0% { opacity: 0; }
-    50% { opacity: 1; }
-    100% { opacity: 0; }
+@keyframes knightFight {
+    0% { right: -150px; }
+    100% { right: 50px; }
 }

@@ -9,20 +9,37 @@
 <body>
 
     <div class="container">
-        <h1>Hey, [Her Name]! 👋</h1>
+        <h1>Hey, Usha 👋</h1>
         <p>Welcome to a little surprise I made just for you! 💖</p>
         
         <button id="revealButton">Click me for a surprise</button>
         <p id="hiddenMessage" class="hidden">You are amazing! 😊</p>
 
-        <button id="scaryButton">😱</button>
+        <div class="button-group">
+            <button id="scaryButton">😱</button>
+            <button id="knightButton">🛡️</button>
+        </div>
 
+        <!-- Michael Jackson GIF container -->
         <div id="mj-container">
-            <img src="https://i.imgur.com/8JZMtV1.png" id="michael" alt="Michael Jackson">
+            <img src="your_mj_gif.gif" id="michael" alt="Michael Jackson">
             <div id="thoughtBubble">Hehe 😏</div>
         </div>
 
-        <div class="animation"></div>
+        <!-- Stick Figure Fighter -->
+        <div id="stick-figure-container">
+            <div class="stick-figure">
+                <div class="head"></div>
+                <div class="body"></div>
+                <div class="left-arm"></div>
+                <div class="right-arm"></div>
+                <div class="left-leg"></div>
+                <div class="right-leg"></div>
+                <div class="sword"></div>
+            </div>
+            <p id="knightSpeech">I am here to save you, my lady! 🏰</p>
+        </div>
+
     </div>
 
     <script src="script.js"></script>
