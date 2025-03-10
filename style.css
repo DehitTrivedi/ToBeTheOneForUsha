@@ -45,12 +45,34 @@ body {
     animation: fadeIn 1s ease-in-out;
 }
 
-/* Smaller scary face button */
+/* Scary Face Button & Text */
+#scaryContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
 #scaryButton {
     background: black;
     font-size: 20px;
     border-radius: 50%;
     padding: 8px;
+    cursor: pointer;
+}
+
+#scaryText {
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    animation: flashText 1s infinite alternate;
+}
+
+/* Flashing Text Animation */
+@keyframes flashText {
+    from { opacity: 1; }
+    to { opacity: 0.6; }
 }
 
 /* Michael Jackson GIF */
@@ -72,7 +94,7 @@ body {
     100% { left: 100%; }
 }
 
-/* Knight button + Flashing Text */
+/* Knight Button & Text */
 #knightContainer {
     display: none;
     text-align: center;
@@ -94,13 +116,7 @@ body {
     animation: flashText 1s infinite alternate;
 }
 
-/* Flashing Text Animation */
-@keyframes flashText {
-    from { opacity: 1; }
-    to { opacity: 0.5; }
-}
-
-/* Stick Figure Fighter */
+/* Stick Figure */
 #stick-figure-container {
     position: absolute;
     bottom: 20px;
@@ -115,55 +131,18 @@ body {
     margin: auto;
 }
 
-.head {
-    width: 20px;
-    height: 20px;
-    background: white;
-    border-radius: 50%;
-    position: absolute;
-    top: 0;
-    left: 5px;
-}
-
-.body {
-    width: 5px;
-    height: 40px;
+.head, .body, .left-arm, .right-arm, .left-leg, .right-leg {
     background: white;
     position: absolute;
-    top: 20px;
-    left: 13px;
 }
 
-.left-arm, .right-arm {
-    width: 20px;
-    height: 5px;
-    background: white;
-    position: absolute;
-    top: 25px;
-}
-
-.left-arm { left: -10px; }
-.right-arm { left: 15px; }
-
-.left-leg, .right-leg {
-    width: 5px;
-    height: 25px;
-    background: white;
-    position: absolute;
-    top: 60px;
-}
-
-.left-leg { left: 5px; }
-.right-leg { left: 15px; }
-
-.sword {
-    width: 5px;
-    height: 30px;
-    background: silver;
-    position: absolute;
-    top: 5px;
-    left: 25px;
-}
+.head { width: 20px; height: 20px; border-radius: 50%; top: 0; left: 5px; }
+.body { width: 5px; height: 40px; top: 20px; left: 13px; }
+.left-arm { width: 20px; height: 5px; top: 25px; left: -10px; }
+.right-arm { width: 20px; height: 5px; top: 25px; left: 15px; }
+.left-leg { width: 5px; height: 25px; top: 60px; left: 5px; }
+.right-leg { width: 5px; height: 25px; top: 60px; left: 15px; }
+.sword { width: 5px; height: 30px; background: silver; position: absolute; top: 5px; left: 25px; }
 
 /* Knight Speech */
 #knightSpeech {
@@ -178,36 +157,3 @@ body {
     0% { right: -150px; }
     100% { right: 50px; }
 }
-
-/* Styles for the scary face button container */
-#scaryContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 15px;
-}
-
-/* Smaller scary face button */
-#scaryButton {
-    background: black;
-    font-size: 20px;
-    border-radius: 50%;
-    padding: 8px;
-    cursor: pointer;
-}
-
-/* Text next to the scary face emoji */
-#scaryText {
-    font-size: 14px;
-    font-weight: bold;
-    color: white;
-    animation: flashText 1s infinite alternate;
-}
-
-/* Flashing effect for the brave text */
-@keyframes flashText {
-    from { opacity: 1; }
-    to { opacity: 0.6; }
-}
-
