@@ -15,7 +15,8 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-button {
+/* Surprise Button */
+#surpriseButton {
     background: #ff6f61;
     border: none;
     padding: 10px 20px;
@@ -24,10 +25,24 @@ button {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
+    transition: transform 0.3s ease-in-out;
 }
 
-button:hover {
-    background: #ff4c4c;
+#surpriseButton:hover {
+    transform: scale(1.1);
+}
+
+/* Cool Animation when "Click me for a surprise" is clicked */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hidden {
+    display: none;
+    font-size: 20px;
+    margin-top: 20px;
+    animation: fadeIn 1s ease-in-out;
 }
 
 /* Smaller scary face button */
@@ -42,23 +57,47 @@ button:hover {
 #mj-container {
     position: absolute;
     bottom: 20px;
-    left: -200px;
+    left: -300px;
     display: none;
 }
 
 #michael {
-    width: 120px;
+    width: 180px;
     height: auto;
 }
 
-/* Knight button (hidden initially) */
-#knightButton {
+/* Looping MJ movement */
+@keyframes moonwalk {
+    0% { left: -300px; }
+    100% { left: 100%; }
+}
+
+/* Knight button + Flashing Text */
+#knightContainer {
     display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#knightButton {
     background: navy;
     font-size: 30px;
     border-radius: 50%;
     padding: 10px;
+    cursor: pointer;
+}
+
+#knightText {
+    font-size: 16px;
+    font-weight: bold;
     margin-top: 10px;
+    animation: flashText 1s infinite alternate;
+}
+
+/* Flashing Text Animation */
+@keyframes flashText {
+    from { opacity: 1; }
+    to { opacity: 0.5; }
 }
 
 /* Stick Figure Fighter */
@@ -134,12 +173,7 @@ button:hover {
     margin-top: 10px;
 }
 
-/* Animations */
-@keyframes moonwalk {
-    0% { left: -200px; }
-    100% { left: 100%; }
-}
-
+/* Knight Fights MJ */
 @keyframes knightFight {
     0% { right: -150px; }
     100% { right: 50px; }
