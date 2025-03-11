@@ -15,7 +15,8 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-button {
+/* Surprise Button */
+#surpriseButton {
     background: #ff6f61;
     border: none;
     padding: 10px 20px;
@@ -24,28 +25,135 @@ button {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
+    transition: transform 0.3s ease-in-out;
 }
 
-button:hover {
-    background: #ff4c4c;
+#surpriseButton:hover {
+    transform: scale(1.1);
+}
+
+/* Cool Animation when "Click me for a surprise" is clicked */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .hidden {
     display: none;
     font-size: 20px;
     margin-top: 20px;
+    animation: fadeIn 1s ease-in-out;
 }
 
-.animation {
-    width: 50px;
-    height: 50px;
-    background: white;
-    margin: 20px auto;
+/* Scary Face Button & Text */
+#scaryContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+#scaryButton {
+    background: black;
+    font-size: 20px;
     border-radius: 50%;
-    animation: bounce 2s infinite;
+    padding: 8px;
+    cursor: pointer;
 }
 
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
+#scaryText {
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    animation: flashText 1s infinite alternate;
+}
+
+/* Flashing Text Animation */
+@keyframes flashText {
+    from { opacity: 1; }
+    to { opacity: 0.6; }
+}
+
+/* Michael Jackson GIF */
+#mj-container {
+    position: absolute;
+    bottom: 20px;
+    left: -300px;
+    display: none;
+}
+
+#michael {
+    width: 180px;
+    height: auto;
+}
+
+/* Looping MJ movement */
+@keyframes moonwalk {
+    0% { left: -300px; }
+    100% { left: 100%; }
+}
+
+/* Knight Button & Text */
+#knightContainer {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#knightButton {
+    background: navy;
+    font-size: 30px;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#knightText {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    animation: flashText 1s infinite alternate;
+}
+
+/* Stick Figure */
+#stick-figure-container {
+    position: absolute;
+    bottom: 20px;
+    right: -150px;
+    display: none;
+}
+
+.stick-figure {
+    position: relative;
+    width: 30px;
+    height: 80px;
+    margin: auto;
+}
+
+.head, .body, .left-arm, .right-arm, .left-leg, .right-leg {
+    background: white;
+    position: absolute;
+}
+
+.head { width: 20px; height: 20px; border-radius: 50%; top: 0; left: 5px; }
+.body { width: 5px; height: 40px; top: 20px; left: 13px; }
+.left-arm { width: 20px; height: 5px; top: 25px; left: -10px; }
+.right-arm { width: 20px; height: 5px; top: 25px; left: 15px; }
+.left-leg { width: 5px; height: 25px; top: 60px; left: 5px; }
+.right-leg { width: 5px; height: 25px; top: 60px; left: 15px; }
+.sword { width: 5px; height: 30px; background: silver; position: absolute; top: 5px; left: 25px; }
+
+/* Knight Speech */
+#knightSpeech {
+    display: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Knight Fights MJ */
+@keyframes knightFight {
+    0% { right: -150px; }
+    100% { right: 50px; }
 }
